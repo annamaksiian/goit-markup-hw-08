@@ -1,0 +1,205 @@
+/*Form-modal*/
+.form {
+  margin-top: 12px;
+  .form__box {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    position: relative;
+  }
+  .form-button {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    color: var(--primary-white-color);
+    cursor: pointer;
+
+    background-color: #188ce8;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+.form__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  padding-left: 42px;
+  transition: 0.25ms linear border;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--theme-color);
+  }
+}
+
+.form__comment {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--theme-color);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.form__input:focus + svg {
+  fill: var(--theme-color);
+}
+
+.form__icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transition: 0.25ms linear;
+}
+.policy-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-box {
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 1.5px solid var(--text-primary);
+    border-radius: 2px;
+    margin-right: 9px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  .policy-checkbox:checked + &::before {
+    background-color: var(--theme-color);
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1.5px solid var(--theme-color);
+  }
+}
+
+.check-box__link {
+  color: var(--theme-color);
+  text-decoration: underline;
+}
+
+/* footer-form */
+.wrapper-form {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    text-align: center;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+
+  .wrapper-form__item {
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.16;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+
+  .footer-form__input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    cursor: pointer;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: border var(--transition);
+
+    &:focus {
+      outline: none;
+      border: 1px solid #2196f3;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+  }
+}
+
+.footer-form__btn {
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+  }
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--theme-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 62px;
+  margin-left: 12px;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-white-color);
+  cursor: pointer;
+  .footer-form__icon {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+  }
+}
